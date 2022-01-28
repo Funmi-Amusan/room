@@ -1,0 +1,346 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+    --clr-dark-gray: 0 0% 63%; 
+    --clr-black: 0, 0%, 0%;
+    --clr-very-dark-gray: 0 0% 27%;
+    --clr-white: 0 0% 100%;
+    
+    /* font-sizes */
+    --fs-48: 3em;
+    --fs-32: 2.5em;
+    --fs-24: 2.2em;
+    --fs-18: 2em;
+    --fs-16: 1.5em;
+    --fs-14: 1.1em;
+    --fs-12: 1em;
+    --fs-10: 0.8em;
+}
+
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    color: inherit;
+}
+
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img { width: 100%;}
+
+
+/*------------- UTILITY CLASSES -----------*/
+
+/* Typography */
+
+.fs-a { font-size: var(--fs-12);}
+.fs-p { font-size: var(--fs-12); line-height: 1.5em; font-weight: lighter;}
+.fs-h1 { font-size: var(--fs-48);}
+.fs-h2 { font-size: var(--fs-32);}
+.fs-h3 { font-size: var(--fs-24);}
+.fs-h4 { font-size: var(--fs-18);}
+.fs-h5 { font-size: var(--fs-14);}
+.fs-h6 { font-size: var(--fs-12);}
+
+/* Colors */
+.text-gray { color: hsl( var(--clr-dark-gray));}
+.text-dark-gray { color: hsl( var(--clr-very-dark-gray));}
+.text-white { color: hsl( var(--clr-white));}
+
+.bg-gray { background: hsl( var(--clr-dark-gray));}
+.bg-dark-gray { background: hsl( var(--clr-very-dark-gray));}
+.bg-white { background: hsl( var(--clr-white));}
+.bg-black { background: hsl( var(--clr-black));}
+
+/* layout tools */
+.flex { display: flex; align-items: center;}
+.flex-column { flex-direction: column;}
+.flex-row-rev { flex-direction: row-reverse;}
+.grid { display: grid;}
+.space-btwn { justify-content: space-between;}
+.container { padding: 4em 2em;}
+.pd-1 { padding: 1em;}
+.center-text { text-align: center;}
+.pd-y { padding: 1em 0;}
+.pad-y { padding: 0.5em 0 1em 0;}
+.pad-bot { padding-bottom: 1em;}
+.pad-top { padding-top: 2em;}
+.pd-in-start { padding-inline-start: 0.5em;}
+.l-sp { letter-spacing: 1em;}
+.l-sp2 { letter-spacing: 0.5em;}
+.center { justify-content: center;}
+.uppercase { text-transform: uppercase;}
+
+/* MOBILE VIEW */
+
+header { 
+    position: fixed;
+    z-index: 8765;
+    display: flex;
+    justify-content: space-between;
+    width: 55vw;
+    padding-inline-start: 1em;
+    padding-top: 2em;
+ }
+
+ .slide-img {
+     position: relative;
+ }
+
+.pointers { 
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+}
+
+.pointers button {
+    width: 100px;
+    padding:1.5em;
+    outline: none;
+    background: hsl( var(--clr-black));
+    border: none;
+}
+
+.pointers button:hover {
+    background-color: hsl( var(--clr-very-dark-gray));
+}
+
+.shop a:hover {
+    color: hsl( var(--clr-dark-gray));
+}
+
+
+nav li {
+    margin-right: 2em;
+    padding-bottom: 0.5em;
+}
+
+nav li:hover {
+    border-bottom: 2px solid hsl( var(--clr-white));
+}
+nav {
+    background: white;
+    width: 100vw;
+    position: absolute;
+    height: 80px;
+    top: 0;
+    left: 0;
+    padding: 1.5em;
+    justify-content: space-between;
+    display: none;
+}
+
+.nav-active {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.slider {
+    position: relative;
+    height: 130vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+}
+
+.slide1 {
+    left: 0%;
+}
+
+.slide2 {
+    left: 100%;
+}
+
+
+.slide3 {
+    left: 200%;
+}
+
+
+
+.slide-img1 {
+    background: url(/images/billy-jo-catbagan-PbS9rXhsYIU-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.slide-img2 {
+    background: url(/images/billy-jo-catbagan-HnocQHPHPR8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.slide-img3 {
+    background: url(/images/billy-jo-catbagan-BpSvhU5punY-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.shop {
+    width: 70%;
+}
+
+.shop img {
+    width: 10%;
+}
+
+/* TAB LAYOUT */
+
+@media (min-width: 40rem) {
+
+    body {
+        font-size: 12px;
+        height: 100vh;
+    }
+    
+    header { 
+        z-index: 8765;
+        display: flex;
+        justify-content: space-between;
+        width: 50vw;
+        padding-inline-start: 4em;
+        padding-top: 2em;
+     }
+    
+    nav {
+        position: static;
+        display: flex;
+        background: transparent;
+        width: 100%;
+        color: white;
+        padding-inline-start: 4em;
+    }
+    
+    .icon { display: none;}
+    
+    
+    .slide {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    
+    
+    .pointers { 
+       position: absolute;
+       bottom: 0;
+       right: -100px;
+       width: 100px;
+       padding: 1em 1.5em;
+    }
+    
+    .slider {
+       height: 100vh;
+    }
+    
+    .slide > div {
+       height: 100%;
+       padding: 3vw;
+    }
+    
+    .slide-text > div {
+       display: flex;
+       flex-direction: column;
+       place-content: center;
+       height: 100%;
+    }
+    
+    .bottom {
+       display: grid;
+       grid-template-columns: 30% 40% 30%;
+       height: fit-content;
+    }
+    
+    .bottom img,
+    .bottom > div {
+       height: 100%;
+    }
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 50rem) {
+
+    body {
+        font-size: 12px;
+    }
+
+
+}
+
+
+
